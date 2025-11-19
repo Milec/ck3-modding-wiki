@@ -8,7 +8,7 @@
   - [Robot ###](#robot)
 - [Continue Reading](#continue-reading)
 
-Flavorization is how the game defines and prioritizes which "title" to display on characters, whom will often qualify for multiple titles. As such, we define the requirements and overall priority of a title in flavorization files to avoid conflicts and inappropriate title placement.
+Flavorization is how the game defines and prioritizes which "title" to display on characters, who will often qualify for multiple titles. As such, we define the requirements and overall priority of a title in flavorization files to avoid conflicts and inappropriate title placement.
 
 
 ## Grammar
