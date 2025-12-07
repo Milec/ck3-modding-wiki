@@ -132,6 +132,8 @@ Namespaces can be any alphanumeric string (without the '.' character), and are u
 
 If an event file uses a namespace, it has to be declared at the beginning of the file with ``namespace = &lt;namespace&gt;``. This has to be done for every file the namespace is used in.
 
+Notice that if the ID exceeds 9999, the event calling system will become buggy, so please consider the max allowed ID for a given namespace as 9999.
+
 
 ### Flags
 
