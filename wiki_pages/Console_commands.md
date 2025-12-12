@@ -192,12 +192,12 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | add_title_law | Adds [succession law id] to [title id]. | [title id] [law id] | add_title_law e_hre feudal_elective_succession_law |
 | add_trait | Adds [trait id] to [character id], if no character is specified then the player character. | [trait id] [character id] | add_trait witch |
 | add_lifestyle_xp_all | Adds [amount] of experience to all lifestyles of [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp_all 2000 |
-| add_diplomacy_lifestyle_xp | Adds [amount] of diplomacy lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_diplomacy_lifestyle_xp 2000 |
-| add_martial_lifestyle_xp | Adds [amount] of martial lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_martial_lifestyle_xp 2000 |
-| add_stewardship_lifestyle_xp | Adds [amount] of stewardship lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_stewardship_lifestyle_xp 2000 |
-| add_intrigue_lifestyle_xp | Adds [amount] of intrigue lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_intrigue_lifestyle_xp 2000 |
-| add_learning_lifestyle_xp | Adds [amount] of learning lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_learning_lifestyle_xp 2000 |
-| add_wanderer_lifestyle_xp | Adds [amount] of learning lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_wanderer_lifestyle_xp 2000 |
+| add_lifestyle_xp diplomacy_lifestyle | Adds [amount] of diplomacy lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp diplomacy_lifestyle 2000 |
+| add_lifestyle_xp martial_lifestyle | Adds [amount] of martial lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp martial_lifestyle 2000 |
+| add_lifestyle_xp stewardship_lifestyle | Adds [amount] of stewardship lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp stewardship_lifestyle 2000 |
+| add_lifestyle_xp intrigue_lifestyle | Adds [amount] of intrigue lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp intrigue_lifestyle 2000 |
+| add_lifestyle_xp learning_lifestyle | Adds [amount] of learning lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp learning_lifestyle 2000 |
+| add_lifestyle_xp wanderer_lifestyle | Adds [amount] of learning lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp wanderer_lifestyle 2000 |
 | age | Adds [amount] of age to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | age 20 |
 | ai.disable | Disables AI for [character id], if no character is specified then all characters. | [character id] | ai.disable 20076 |
 | ai.enable | Enables AI for [character id], if no character is specified then all characters. | [character id] | ai.enable 20076 |
@@ -329,6 +329,7 @@ Most artifacts are randomly generated through complex scripts and cannot be spaw
 | effect create_artifact_fp2_4p_chess_board_effect = { OWNER = this } | Four-Player Chess Board |
 | effect create_artifact_pedestal_baekje_incense_burner_effect = { OWNER = this } | Gilt-Bronze Incense Burner |
 | effect create_artifact_pedestal_great_diamond_effect = { OWNER = this } | Great Diamond |
+| effect create_artifact_statue_viet_green_amitabha_buddha_effect = { OWNER = this } | Green Stone Amitabha Buddha |
 | effect create_artifact_edmund_head_effect = { OWNER = this } | Head of St. Edmund |
 | effect create_artifact_heirloom_seal_effect = { OWNER = this } | Heirloom Seal |
 | effect create_artifact_hydraulic_organ_effect = { OWNER = this } | Hydraulic Organ |
