@@ -45,8 +45,12 @@ This is the bare minimum required to create a title, and it can now be granted t
 
 Please notice that you cannot add titular barony or county titles, since baronies and counties are more linked to the game map itself (like province id for baronies and duchy capital building for counties). As the result, you cannot add county outside the scope of a defined duchy, nor can you add a barony outside the scope of a defined county. Further more, in the scope of any given county, at least 1 barony needs to be defined there, and in the scope of any given barony, the province id must be assigned. See examples below: 
 ```coffeescript
-1. all colors will be assigned write just to save typing time
+1. all colors will be assigned white just to save typing time
 
+1. this works
+h_my_hegemony = {
+	color = "white"
+}
 1. this works
 e_my_empire = {
 	color = "white"
