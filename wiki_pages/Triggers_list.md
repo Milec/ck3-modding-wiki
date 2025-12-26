@@ -179,6 +179,7 @@ Some triggers have been deprecated, and some triggers added after launch are mis
 | is_head_of_faith | Is this title a head of faith title |  |  | landed title | yes/no |  |  |
 | is_hybrid_culture | Checks if the scope culture was created from a hybridization of two cultures and returns yes if true or no if false. | `is_hybrid_culture = yes` |  | culture | yes/no |  |  |
 | is_landless_ruler | Is the scope character a landless ruler (holds any title, but no on-map land)? |  |  | character | yes/no |  |  |
+| is_pregnant | is the scoped character pregnant ? |  |  | character | yes/no |  |  |
 | is_raided | Is this province currently being raided? |  |  | province | yes/no |  |  |
 | is_riverside_county | is the county riverside? |  |  | landed title | yes/no |  |  |
 | is_riverside_province | is the province riverside? |  |  | province | yes/no |  |  |
