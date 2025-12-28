@@ -746,6 +746,7 @@ Some triggers have been deprecated, and some triggers added after launch are mis
 | is_spouse_of | Is the character a spouse of the target character, and are both alive? |  | character target | character |  |  |  |
 | is_spouse_of_even_if_dead | Is the character a spouse of the target character, even if one or both are dead? |  | character target | character |  |  |  |
 | is_theocratic_lessee | Is the scope character a theocratic lessee (bishop)? |  | yes/no | character |  |  |  |
+| is_travelling | Is the scope character travelling ? |  | yes/no | character |  |  |  |
 | is_twin_of | Is the character a twin of the target character? |  | character target | character |  |  |  |
 | is_unborn_child_of_concubine | Is the unborn a child of a concubine? |  | yes/no | character |  |  |  |
 | is_unborn_known_bastard | Is the unborn a known bastard? |  | yes/no | character |  |  |  |
