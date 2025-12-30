@@ -15,6 +15,7 @@ Titles are defined in the */common/landed_titles/* folder
 - [List of attributes](#list-of-attributes)
 - [Duchy Capital Building](#duchy-capital-building)
 - [History](#history)
+- [Defining Cultural Names](#defining-cultural-names)
 
 
 ## Basic Titular Title
@@ -196,6 +197,19 @@ Otherwise
 One should be very careful with the barony. It is possible to create an independent barony or a barony, which can already lead to big mistakes. It is therefore recommended, if possible, not to define barony in the title or, if so, to always add "liege" according to the county in order to avoid possible sources of error. If not set development is 0.
 
 
+## Defining Cultural Names
+
+In common\landed_titles\landed_titles.txt, the cultural name (A title with variant names according to the culture of the wielder) of your title may be defined using the following code.
+```coffeescript
+k_titular_kingdom_name = {
+	color = { 100 255 200 }
+	cultural_names = {
+		name_list_culture_name = cn_kingdom_name
+	}
+}
+```
+
+Localization for cn_kingdom_name would be found at localization\localization\&lt;language&gt;\custom_titles_cultural_names_I_&lt;language&gt;.txt and code for the data of name_list_culture_name would be found at common\culture\cultures\custom_culture_name.txt
 Category:Modding
 
 ---

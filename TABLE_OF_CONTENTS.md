@@ -537,6 +537,7 @@ Complete index of all pages and their sections.
 - [List of attributes](wiki_pages/Title_modding.md#list-of-attributes)
 - [Duchy Capital Building](wiki_pages/Title_modding.md#duchy-capital-building)
 - [History](wiki_pages/Title_modding.md#history)
+- [Defining Cultural Names](wiki_pages/Title_modding.md#defining-cultural-names)
 
 ## [Trait modding](wiki_pages/Trait_modding.md)
 
