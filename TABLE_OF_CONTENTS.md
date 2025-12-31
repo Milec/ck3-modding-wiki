@@ -341,6 +341,17 @@ Complete index of all pages and their sections.
   - [Why can't I use the auto-nudge (dice) button to place my buildings and locators?](wiki_pages/Map_modding.md#why-cant-i-use-the-auto-nudge-dice-button-to-place-my-buildings-and-locators)
   - [Why is there a line across the screen?](wiki_pages/Map_modding.md#why-is-there-a-line-across-the-screen)
 
+## [Mod compatibility](wiki_pages/Mod_compatibility.md)
+
+- [General practices](wiki_pages/Mod_compatibility.md#general-practices)
+  - [Total conversions](wiki_pages/Mod_compatibility.md#total-conversions)
+- [Basic techniques](wiki_pages/Mod_compatibility.md#basic-techniques)
+  - [Shared variable](wiki_pages/Mod_compatibility.md#shared-variable)
+  - [Shared scripted effect](wiki_pages/Mod_compatibility.md#shared-scripted-effect)
+- [Detecting other mods](wiki_pages/Mod_compatibility.md#detecting-other-mods)
+  - [Global variable](wiki_pages/Mod_compatibility.md#global-variable)
+  - [Scripted trigger](wiki_pages/Mod_compatibility.md#scripted-trigger)
+
 ## [Mod structure](wiki_pages/Mod_structure.md)
 
 - [Creating initial files](wiki_pages/Mod_structure.md#creating-initial-files)
