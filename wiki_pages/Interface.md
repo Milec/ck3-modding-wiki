@@ -1462,6 +1462,7 @@ The following names can be used with commands like OpenGameView and IsGameViewOp
 ### Known crash reasons
 
 - setting 100% size on hboxes and vboxes
+- using an hbox or vbox inside a flowcontainer
 - setting ``resizeparent = yes`` on multiple children in the same parent
 
 even if only one of them is visible, this will still crash
