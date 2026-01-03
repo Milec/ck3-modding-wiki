@@ -304,7 +304,7 @@ Complete index of all pages and their sections.
   - [localization\english\MY_l_english.yml](wiki_pages/Localization.md#localizationenglishmy_l_englishyml)
   - [Traits](wiki_pages/Localization.md#traits)
   - [Titles](wiki_pages/Localization.md#titles)
-- [Rounding numbers](wiki_pages/Localization.md#rounding-numbers)
+- [Number formatting](wiki_pages/Localization.md#number-formatting)
 - [Icons](wiki_pages/Localization.md#icons)
 - [Usage of special characters & Line breaks](wiki_pages/Localization.md#usage-of-special-characters-line-breaks)
 - [Chinese punctuation](wiki_pages/Localization.md#chinese-punctuation)

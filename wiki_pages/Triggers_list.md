@@ -485,7 +485,7 @@ Some triggers have been deprecated, and some triggers added after launch are mis
 | character_has_commander_trait_scope_does_not | Does the character have a commander trait that the scope does not? |  | character target | character |  |  |  |
 | character_is_land_realm_neighbor | Is the scoped character a realm neighbor of the target? Meaning they're independent or have the same liege, and border your realm. |  | character target | character |  |  |  |
 | character_is_realm_neighbor | Is the scoped character a realm neighbor of the target? Meaning they're independent or has the same liege, and border your realm. Including across two sea zones |  | character target | character |  |  |  |
-| completely_controls | Coes the character control all counties and baronies inside de jure title (no hostile occupation either)? |  | landed title scope | character | landed title |  |  |
+| completely_controls | Does the character control all counties and baronies inside de jure title (no hostile occupation either)? |  | landed title scope | character | landed title |  |  |
 | completely_controls_region | Does the character control all counties and baronies inside the specified region (no hostile occupation either)? |  |  | character | geographical region |  |  |
 | council_task_monthly_progress | Is the scoped character's monthly progress on their assigned council task this big? |  | &lt;, &lt;=, =, !=, &gt;, &gt;= | character |  |  |  |
 | create_faction_type_chance | Check if the chance to create a faction against a target of the scope character is is true against the scripted value | create_faction_type_chance = { <br>    type = faction_type #An ongoing faction<br>    target = target_character<br>    value <|<=|>=|> 0<br>} |  | character |  |  |  |

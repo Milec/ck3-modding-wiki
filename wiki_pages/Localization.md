@@ -78,7 +78,7 @@ A few more are defined in ``Crusader Kings III/jomini/gui/jomini/basetextformatt
   - [localization\english\MY_l_english.yml](#localizationenglishmy_l_englishyml)
   - [Traits](#traits)
   - [Titles](#titles)
-- [Rounding numbers](#rounding-numbers)
+- [Number formatting](#number-formatting)
 - [Icons](#icons)
 - [Usage of special characters & Line breaks](#usage-of-special-characters-line-breaks)
 - [Chinese punctuation](#chinese-punctuation)
@@ -427,21 +427,29 @@ You can also link to a specific title with:
 This will cause the title to have a tooltip which shows the title information. You can also use ``GetNameNoTier`` so that only the title's name will appear.
 
 
-## Rounding numbers
+## Number formatting
 
-If a numeric value has a decimal portion, it can be rounded by using the desired number of decimal places, such as:
+Numeric values can be formatted in different ways using a number of codes, which can sometimes be combined.
 
-
-```
-1. Round to 2 decimals
-[some_value|2]
-
-1. Remove all decimals:
-[some_value|0]
-```
-
-
-Note that the value is **always** rounded down.
+| **Character/Code** | **Description** | **Code Example** | **Code  Example Output** |
+| --- | --- | --- | --- |
+| Digit (0-9) | Rounds to the given number decimal places, including trailing zeroes if necessary. Note that the value is **always** rounded down. | `['(CFixedPoint)0.12'|0]` | 0 |
+| Digit (0-9) | Rounds to the given number decimal places, including trailing zeroes if necessary. Note that the value is **always** rounded down. | `['(CFixedPoint)0.12'|1]` | 0.1 |
+| Digit (0-9) | Rounds to the given number decimal places, including trailing zeroes if necessary. Note that the value is **always** rounded down. | `['(CFixedPoint)0.12'|3]` | 0.120 |
+| = | Always display sign, even if positive, and round to two decimal places<br>Note that this can be combined with the digit, e.g. `=0` will display the sign and round to 0 decimal places | `['(CFixedPoint)1'|=]` | +1.00 |
+| = | Always display sign, even if positive, and round to two decimal places<br>Note that this can be combined with the digit, e.g. `=0` will display the sign and round to 0 decimal places | `['(CFixedPoint)-1'|=]` | -1.00 |
+| = | Always display sign, even if positive, and round to two decimal places<br>Note that this can be combined with the digit, e.g. `=0` will display the sign and round to 0 decimal places | `['(CFixedPoint)1'|=0]` | +1 |
+| k OR K | Display as thousands | `['(CFixedPoint)1200'|k]` | 1.20K |
+| + | Colour as positive modifier (colour green if positive, red if negative, white if zero) | `['(CFixedPoint)1.5'|+]` | <span class="effect-green">1.5</span> |
+| + | Colour as positive modifier (colour green if positive, red if negative, white if zero) | `['(CFixedPoint)0'|+]` | <span style="color: grey">0</span> |
+| + | Colour as positive modifier (colour green if positive, red if negative, white if zero) | `['(CFixedPoint)-1.5'|+]` | <span class="effect-red">-1.5</span> |
+| - | Colour as negative modifier (colour red if positive, green if negative, white if zero) | `['(CFixedPoint)1.5'|-]` | <span class="effect-red">1.5</span> |
+| - | Colour as negative modifier (colour red if positive, green if negative, white if zero) | `['(CFixedPoint)0'|-]` | <span style="color: grey">0</span> |
+| - | Colour as negative modifier (colour red if positive, green if negative, white if zero) | `['(CFixedPoint)-1.5'|-]` | <span class="effect-green">-1.5</span> |
+| % | Display as percentage (multiplies the value by 100 and appends a percentage sign) and round the percentage to two decimal places<br>Note that this can be combined with the digit, e.g. `%0` will display as a percentage rounded to 0 decimal places | `['(CFixedPoint)0.2'|%]` | 20.00% |
+| % | Display as percentage (multiplies the value by 100 and appends a percentage sign) and round the percentage to two decimal places<br>Note that this can be combined with the digit, e.g. `%0` will display as a percentage rounded to 0 decimal places | `['(CFixedPoint)0.2'|%0]` | 20% |
+| O | Display as ordinal. Only works on positive integers. | `['(int32)'1|O]` | 1st |
+| v OR V | Display in white with 2 decimal points | `[1.5|v]` | <span style="color: grey">1.50</span> |
 
 
 ## Icons
