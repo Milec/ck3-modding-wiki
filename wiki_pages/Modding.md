@@ -513,6 +513,7 @@ The table below contains the possible first-level blocks in the gamestate file. 
 - [Rajas of Asia](https://ck3.paradoxwikis.com/Rajas_of_Asia)
 - [LotR: Realms in Exile](https://ck3.paradoxwikis.com/LotR:_Realms_in_Exile)
 - [The Fallen Eagle](https://ck3.paradoxwikis.com/The_Fallen_Eagle)
+- [Medieval Arts](https://ck3.paradoxwikis.com/Medieval_Arts)
 
 
 ## External links
