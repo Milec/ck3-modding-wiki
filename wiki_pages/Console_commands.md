@@ -332,6 +332,7 @@ Most artifacts are randomly generated through complex scripts and cannot be spaw
 | effect create_artifact_statue_viet_green_amitabha_buddha_effect = { OWNER = this } | Green Stone Amitabha Buddha |
 | effect create_artifact_edmund_head_effect = { OWNER = this } | Head of St. Edmund |
 | effect create_artifact_heirloom_seal_effect = { OWNER = this } | Heirloom Seal |
+| effect create_artifact_hizamaru_sword_effect = { OWNER = this } | Hizamaru |
 | effect create_artifact_hydraulic_organ_effect = { OWNER = this } | Hydraulic Organ |
 | effect create_artifact_ibeji_effect = { OWNER = this } | Ibeji |
 | effect create_artifact_pedestal_ikenga_effect = { OWNER = this } | Ikenga |
@@ -340,6 +341,7 @@ Most artifacts are randomly generated through complex scripts and cannot be spaw
 | effect create_artifact_pedestal_crown_iron_effect = { OWNER = this } | Iron Crown of Lombardy |
 | effect create_artifact_jewelled_danda_effect = { OWNER = this } | Jeweled Danda |
 | effect create_artifact_joyeuse_effect = { OWNER = this } | Joyeuse |
+| effect create_artifact_karakawa_armor_effect = { OWNER = this } | Karakawa |
 | effect create_artifact_kaves_apron_effect = { OWNER = this } | Kave's Apron |
 | effect create_artifact_essen_crown_effect = { OWNER = this } | Kinderkrone |
 | effect create_artifact_kladenets_effect = { OWNER = this } | Kladenets |

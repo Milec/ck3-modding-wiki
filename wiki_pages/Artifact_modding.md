@@ -101,7 +101,7 @@ The 3D representation of an artefact is controlled via the asset entry.
 
 <figure>
 
-![Artifact unique lance of longius](../assets/images/artifact_unique_lance_of_longius.png)
+![Modding artifact unique lance of longius](../assets/images/modding_artifact_unique_lance_of_longius.png)
 <figcaption>The original "artifact_unique_lance_of_longius.dds" file from CK3 open in paint.net</figcaption>
 </figure>
 
