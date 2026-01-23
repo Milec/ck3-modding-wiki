@@ -618,6 +618,7 @@ Innovation IDs usually match their name. The following innovations use a differe
 | ![Innovation misc inventions](../assets/images/innovation_misc_inventions.png) Ostsiedlung | innovation_east_settling |
 | ![Innovation administration 01](../assets/images/innovation_administration_01.png) Promissory Notes | innovation_currency_04 |
 | ![Innovation misc inventions](../assets/images/innovation_misc_inventions.png) Renaissance Thought | innovation_development_04 |
+| Stone Forts | innovation_burhs |
 
 
 ## Title Tags
