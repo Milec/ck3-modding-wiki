@@ -148,7 +148,7 @@ The province map defines baronies and sea regions. Each barony/sea region is def
 
 The province map does not define counties, duchies, kingdoms, or empires. To Define Counties, Duchies, Kingdoms and Empires you need to define them in landed_titles folder
 
-Make sure to save the provinces.png as an 8 or 24bit RGB file. If you do not save it as an 8 or 24bit RGB file then you will receive a CTD. The original province map is saved as 24bit RGB file. 8bit files can only support 256 different colours, so using this datatype would reduce you on 255 provinces/baronies (the colour black (0 0 0) is reserved for unpassable places like the alpes), If you save a Picture with more colours as 8bit supports almost all picture programmes will start a colour reduce algorythm, which will combine colours that are more or less equal to each other, which will cause many problems for CK-III as the game cannot handle other colours that the ones used in the "definition.csv".
+Make sure to save the provinces.png as an 8 or 24bit RGB file. If you do not save it as an 8 or 24bit RGB file then you will receive a CTD. The original province map is saved as 24bit RGB file. 8bit files can only support 256 different colours, so using this datatype would reduce you to 255 provinces/baronies (the colour black (0 0 0) is reserved for unpassable places like the alps). If you save a Picture with more colours as 8bit supports almost all picture programs will start a colour reduce algorithm, which will combine colours that are more or less equal to each other, which will cause many problems for CK-III as the game cannot handle other colours that the ones used in the "definition.csv".
 
 
 ## Creating titles

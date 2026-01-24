@@ -211,7 +211,7 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | change_stewardship | Adds [amount] of stewardship skill to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | change_stewardship 16 |
 | change_intrigue | Adds [amount] of intrigue skill to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | change_intrigue 16 |
 | change_learning | Adds [amount] of learning skill to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | change_learning 16 |
-| change_prowess | Adds [amount] of prowess skill to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | change_prowess 16 |
+| change_prowesss | Adds [amount] of prowess skill to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | change_prowess 16 |
 | charinfo | You can view infomation such as characters' ID in the game. | None | charinfo |
 | clear_character_modifiers | Removes all character modifiers from [character id], if no character is specified then the player character. | [character id] | clear_character_modifiers |
 | clear_title_laws | Removes all title succession laws from [title id]. | [title id] | clear_title_laws e_hre |
