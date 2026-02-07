@@ -157,6 +157,7 @@ name_of_the_building = {
 	can_construct_showing_failures_only = {}
 	can_construct = {}
 	show_disabled = yes/no	# if set to yes, the building will show in the build menu even if disabled (will still use can_construct_potential). No by default
+	# Remember that the building also has to be listed under any holding that is meant to be able to construct it, as described earlier in this page
 
 	# How much cost does the building cost
 	cost = { gold = 500 ... }
