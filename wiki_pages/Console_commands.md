@@ -229,7 +229,7 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | fow | Toggles the fog of war. | None | fow |
 | gain_all_dynasty_perks | Buys all dynasty legacies for the dynasty of [character id], if no character is specified then the player character's. | [character id] | gain_all_dynasty_perks |
 | gain_all_perks | Gives all lifestyle perks to [character id], if no character is specified then the player character. | [character id] | gain_all_perks |
-| give_title | Gives [title id] to [character id], if no character is specified then the player character. | [title id] [character id] | give_title e_hre |
+| give_title | Gives [title id] to [character id], if no character is specified then the player character. Pressing tab reveals all title IDs. | [title id] [character id] | give_title e_hre |
 | gold | Adds [amount] of gold to the player character. Negative values lower it. Default 1000. | [amount] | gold 500 |
 | guaranteed_scheme_success | Schemes are always successful. | None | guaranteed_scheme_success |
 | guaranteed_scheme_secrecy_success | Schemes are always secret. | None | guaranteed_scheme_secrecy_success |
