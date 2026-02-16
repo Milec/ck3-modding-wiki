@@ -199,7 +199,7 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | add_lifestyle_xp learning_lifestyle | Adds [amount] of learning lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp learning_lifestyle 2000 |
 | add_lifestyle_xp wanderer_lifestyle | Adds [amount] of learning lifestyle experience to [character id], if no character is specified then the player character. Default 1000. | [amount] [character id] | add_lifestyle_xp wanderer_lifestyle 2000 |
 | age | Adds [amount] of age to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | age 20 |
-| ai.disable | Disables AI for [character id], if no character is specified then all characters. | [character id] | ai.disable 20076 |
+| ai.disable | Disables AI for [character id], if no character is specified then all characters.<br>**Note**: Disabling AI for all characters also disables it for automatic armies if they were enabled | [character id] | ai.disable 20076 |
 | ai.enable | Enables AI for [character id], if no character is specified then all characters. | [character id] | ai.enable 20076 |
 | bypass_requirements | Ignores the requirements for player decisions, interactions, schemes, laws, title creation, struggle endings, royal court language and legend completion. | None | bypass_requirements |
 | change_culture | Changes the culture of [county id] to [culture id]. | [county id] [culture id] | change_culture 496 swedish |
