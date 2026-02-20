@@ -201,7 +201,7 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | age | Adds [amount] of age to [character id], if no character is specified then the player character. Negative values lower it. | [amount] [character id] | age 20 |
 | ai.disable | Disables AI for [character id], if no character is specified then all characters.<br>**Note**: Disabling AI for all characters also disables it for automatic armies if they were enabled | [character id] | ai.disable 20076 |
 | ai.enable | Enables AI for [character id], if no character is specified then all characters. | [character id] | ai.enable 20076 |
-| bypass_requirements | Ignores the requirements for player decisions, interactions, schemes, laws, title creation, struggle endings, royal court language and legend completion. | None | bypass_requirements |
+| bypass_requirements | Ignores the requirements for most things. | None | bypass_requirements |
 | change_culture | Changes the culture of [county id] to [culture id]. | [county id] [culture id] | change_culture 496 swedish |
 | change_development_level | Adds [amount] of development to [county id or barony id], if no county is specified then the player character's capital. Negative values lower it. | [amount] [county id or barony id] | change_development_level 100 496 |
 | change_fervor | Adds [amount] of fervor to [faith id], if no faith is specified then the player character's faith. Negative values lower it. Default 10. | [amount] [faith id] | change_fervor 100 catholic |
@@ -235,6 +235,7 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | guaranteed_scheme_secrecy_success | Schemes are always secret. | None | guaranteed_scheme_secrecy_success |
 | instabuild | Player Men-at-Arms are reinforced instantly. Current constructions in the player's domain are finished instantly. New constructions are finished in a day. Entering it again disables it. | None | instabuild |
 | instant_birth | Pregnancies last a day. Entering it again disables it. | None | instant_birth |
+| instant_culture_reformation | Changing traditions is instant. Entering it again disables it. | None | instant_culture_reformation |
 | instant_responses | Characters respond to player actions immediately. Entering it again disables it. | None | instant_responses |
 | instasiege | Sieges will immediately complete at the end of the day. Command toggles the function on and off. | None | instasiege |
 | join_era | Enters [era id] for the culture of [character id], if no character is specified then the player character's. Pressing tab reveals all era IDs. | [era id] | join_era culture_era_high_medieval |
@@ -395,7 +396,7 @@ Most artifacts are randomly generated through complex scripts and cannot be spaw
 
 ### Converting commands
 
-The following commands can be used to convert the realm to a faith or culture.
+The following commands can be used to convert the realm to a faith, culture or government.
 
 | **Command** | **Conversion** |
 | --- | --- |
@@ -408,6 +409,7 @@ The following commands can be used to convert the realm to a faith or culture.
 | Converts every courtier and guest to the character's faith |  |
 | Converts every courtier and guest to the age of 20 (can replace the number with a different value) |  |
 | Converts every vassal and sub-vassal to Feudal government (can replace the government ID with any other) |  |
+| Changes the development of every realm county to 100 (can replace the number with a different value) |  |
 
 
 ### Scripting commands
@@ -416,17 +418,11 @@ Script commands are typically more involved, and mostly used for setting up even
 
 | **Script** | **Effect** | **Parameters** | **Example** |
 | --- | --- | --- | --- |
-| effect title:(county_id) = { set_county_faith = faith:(faith_id) }`` | Changes the faith to [faith id] for a county [county id] | [title: county id], [faith: faith id] | effect title:c_byzantion = { set_county_faith = faith:catholic } |
 | effect spawn_army = { men_at_arms = { type = (men at arms type) = (amount) } location = capital_province } | Adds special soldiers | (men at arms type), (amount) | effect spawn_army = { men_at_arms = { type = huscarl men = 500 } location = capital_province } |
-| effect province:(province_id) = { add_province_modifier = extra_building_slot } | Adds a building slot to the province (stackable) | [title: province id] | effect province:496 = { add_province_modifier = extra_building_slot } |
 | effect add_trait_xp = { trait = [x] value=[y] } | increases one-path leveled lifestyle trait experiences | [x]: leveled trait tag,[y]: experiences | effect add_trait_xp = { trait = lifestyle_blademaster value = 100 }<br>leveled trait tag:<br>lifestyle_blademaster,lifestyle_reveler,lifestyle_physician,pilgrim,<br>lifestyle_mystic,lifestyle_hunter,lifestyle_traveler,tourney_participant,<br>peasant_leader |
 | effect add_trait_xp = { trait = [x] track=[y] value=[z] } | increases multiple-path leveled lifestyle trait experiences | [x]: leveled trait tag,[y]:trait path name ,[z]: experiences | effect add_trait_xp = { trait = lifestyle_hunter track=venator value=100 }<br>lifestyle_hunter path name: venator,falconer<br><br>lifestyle_traveler path name: travel,danger<br><br>tourney_participant path name: bow,foot,horse,wit |
-| effect root.culture = { add_culture_tradition = tradition_here } | effect block to add traditions instantly. | tradition_here | effect root.culture = { add_culture_tradition = tradition_castle_keepers } |
-| effect root.culture = { remove_culture_tradition = tradition_here } | same as above but to remove traditions instead. | tradition_here | effect root.culture = { remove_culture_tradition = tradition_castle_keepers } |
-| effect root.culture = { set_culture_pillar = culture_pillar_id } | instantly change a cultural pillar (e.g. martial custom, ethos) | culture_pillar_id | effect root.culture = { set_culture_pillar = martial_custom_equal }<br>effect root.culture = { set_culture_pillar = ethos_stoic } |
 | effect root = { set_father/mother = character:historical_id } | set your parents, only works with historical id | father/mother<br>historical_id | effect root = { set_father = character:7627 } |
 | effect root = { set_house = character:historical_id.house } | set your house, only works with historical id | historical_id | effect root = { set_house = character:7627.house } |
-| effect every_sub_realm_county = { change_development_level = [x] } | changes development level of all realm countries | [x]: numeric value | effect every_sub_realm_county = { change_development_level = 100 } |
 | effect title:[x] = { set_de_jure_liege_title = title:[y] } | Makes [x] de jure part of [y] | [x]: title id<br>[y]: title id | effect title:k_egypt = { set_de_jure_liege_title = title:e_byzantium } |
 | effect every_vassal_or_below = { add_trait = traitname } | Adds trait to every subject | trait name | effect every_vassal_or_below = { add_trait = intellect_good_3 } |
 | effect every_vassal_or_below = { remove_trait = traitname } | Removes trait from every subject | trait name | effect every_vassal_or_below = { remove_trait = ill } |
