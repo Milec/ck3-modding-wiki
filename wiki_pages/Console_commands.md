@@ -362,6 +362,7 @@ Most artifacts are randomly generated through complex scripts and cannot be spaw
 | effect create_artifact_peacock_throne_effect = { OWNER = this } | Peacock Throne |
 | effect create_artifact_sculpture_cabinet_pentapyrgion_effect = { OWNER = this } | Pentapyrgion |
 | effect create_artifact_robe_kassapa_effect = { OWNER = this } | Piece of Kassapa's Robe |
+| effect create_artifact_trinket_icon_ancient_effect = { OWNER = this } | Portable Icon |
 | effect create_artifact_qadib_al_mulk_effect = { OWNER = this } | Qadib al-Mulk |
 | effect create_artifact_quernbiter_effect = { OWNER = this } | Quern-Biter |
 | effect create_artifact_reichskrone_effect = { OWNER = this } | Reichskrone |
