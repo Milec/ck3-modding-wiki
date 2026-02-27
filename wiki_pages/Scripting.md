@@ -586,7 +586,7 @@ trigger_if = {
 }
 ```
 
-``trigger_else_if`` can be used after a ``trigger_if`` the same way as if/else are.
+``trigger_else_if`` can be used after a ``trigger_if`` the same way as if/else are, and you may use multiple of them.
 
 ```c
 trigger_if = {
@@ -597,10 +597,16 @@ trigger_else_if = {
   limit = { ... }
   ...
 }
+trigger_else_if = {
+  limit = { ... }
+  ...
+}
 trigger_else = {}
 ```
 
-Note that sometimes the script might expect a trigger_else at the end. Try adding it if something isn't working.
+**You must** finish such ladder with ``trigger_else`` when using ``trigger_else_if``! Even if it's just empty, like in the example.
+
+Otherwise, ``trigger_else`` it is not required after a simple ``trigger_if``
 
 Remember to only use ``trigger_if`` in a trigger block, not in an effect!
 
