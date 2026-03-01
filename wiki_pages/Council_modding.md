@@ -3,6 +3,8 @@
 Councillors are defined in the */common/council_positions/* folder.
 Council tasks are defined in the */common/council_tasks/* folder.
 
+Please note that newly created councillor type will only appear and work in new games. For any councillor type, at least 1 council task has to be defined for the councillor type, or the game will crash when loading.
+
 
 - [Council Positions Structure](#council-positions-structure)
 
