@@ -17,7 +17,7 @@ Some triggers have been deprecated, and some triggers added after launch are mis
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | all_court_artifact_slots | check if all the scoped characters court artifact slots are empty or full |  |  | character |  |  |  |
 | all_inventory_artifact_slots | check if all the scoped characters inventory artifact slots are empty or full |  |  | character |  |  |  |
-| amenity_level | Compares the scoped character's amenity level in the given type to the given value | `amenity_level = { type = food value >= 5 }` |  | character | &lt;, &lt;=, =, !=, &gt;, &gt;= |  |  |
+| amenity_level | Compares the scoped character's amenity level in the given type to the given value | <code style="white-space: pre">amenity_level = { target = court_food_quality value &gt; 2 }<br>(It is "target" instead of "type" hereafter. "type" has been decommissioned.)</code> |  | character | &lt;, &lt;=, =, !=, &gt;, &gt;= |  |  |
 | any_artifact | Iterate through all existing artifacts | `any_artifact = { <count=num/all> / <percent=fixed_point> <triggers> }` |  | none | artifact |  |  |
 | any_artifact_claimant | Iterate through all characters with a claim on the scoped artifact | `any_artifact_claimant = { <count=num/all> / <percent=fixed_point> <triggers> }` |  | artifact | character |  |  |
 | any_artifact_house_claimant | Iterate through all dynasty houses with a claim on the scoped artifact | `any_artifact_house_claimant = { <count=num/all> / <percent=fixed_point> <triggers> }` |  | artifact | dynasty house |  |  |

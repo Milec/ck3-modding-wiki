@@ -862,7 +862,7 @@ This table uses contents from */common/on_action/on_actions.info* file.
 | on_natural_death_second_chance |  | Yes | None |  |
 | on_leave_council |  | Yes | Character |  |
 | on_county_culture_change |  | Yes | None |  |
-| on_war_started |  | Yes | None |  |
+| on_war_started |  | Yes | None | On-action scopes: scope:defender/scope:attacker/scope:war |
 | on_marriage |  | Yes | Character |  |
 | on_great_holy_war_participant_replaced |  | Yes | Character |  |
 | five_year_playable_pulse |  | Yes | Character |  |
