@@ -223,6 +223,7 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | discover_innovation | Discovers [innovation id] for the culture of [character id], if no character is specified then the player character's. Pressing tab reveals all innovation IDs. | [innovation id] [character id] | discover_innovation innovation_motte |
 | dynasty_prestige | Adds [amount] of renown to [dynasty id], if no dynasty is specified then the player character's dynasty. Negative values lower it. Default 1000. | [amount] [dynasty id] | dynasty_prestige 100000 |
 | effect change_government = | Change government to [government id], will not work if the government's DLC is not installed. | [government id] | effect change_government = feudal_government |
+| effect add_character_modifier = { modifier = ai_extreme_conqueror_modifier } | Gives currently played charecter Extreme Conquerer Bonuses | none | effect add_character_modifier = { modifier = ai_extreme_conqueror_modifier } |
 | end_diarchy | Ends power sharing for [character id], if no character is specified then the player character. | [character id] | end_diarchy |
 | end_schemes | All schemes targeting the player character are abandoned. | None | end_schemes |
 | event | Triggers [event id]. | [event id] [character id] | event court_maintenance.0012 |
