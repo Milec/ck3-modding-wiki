@@ -49,26 +49,47 @@ This article is a brief introduction to CK3 modding. To learn more, inspect game
 
 ## Tips & guidelines
 
-- **Start the game with -debug_mode -develop** launch option to instantly reload files and use the console.
-   - On Steam: right-click the game on Steam -> Properties ->  add -debug_mode -develop to Launch Options at the bottom
-   - Windows: Create a shortcut for the .exe file -> right-click it -> Properties -> add -debug_mode -develop at the end of the Target field
-   - Windows Xbox Game Pass: Open 'Command Prompt' and run 'start shell:AppsFolder\ParadoxInteractive.ProjectTitus_zfnrdv2de78ny!App -debug_mode -develop’
+**Start the game with -debug_mode -develop** launch options to instantly reload files and use the console.
+- On Steam: right-click the game on Steam -> Properties ->  add -debug_mode -develop to Launch Options at the bottom
+- Windows: Create a shortcut for the .exe file -> right-click it -> Properties -> add -debug_mode -develop at the end of the Target field
+- Windows Xbox Game Pass: Open 'Command Prompt' and run 'start shell:AppsFolder\ParadoxInteractive.ProjectTitus_zfnrdv2de78ny!App -debug_mode -develop'
+**Use a good text editor** to easily edit files and search through all the files in game folders. Text editors offer auto-complete, auto-formatting, syntax highlighting. They greatly speed up the process and help spot and prevent errors. The following, aside from Intellij IDEA are free:
+- [Visual Studio Code](https://code.visualstudio.com/). Has fan-made extensions, like [CK3 Tiger](https://marketplace.visualstudio.com/items?itemName=unlomtrois.ck3tiger-for-vscode&ssr=false#overview) to validate code, [Paradox Highlight](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight&ssr=false#overview) for syntax highlighting and [CWTools](https://marketplace.visualstudio.com/items?itemName=tboby.cwtools-vscode) which does both and adds autocomplete and tooltips for triggers and effects. To install, use the links or go to Extensions on the left panel of VSC and search for them. (Note: CWTools validation rules are incomplete and will show a lot of false errors)
+- [Sublime Text](https://www.sublimetext.com/). Often used by developers themselves, and they've released an extension for it: [CK3 Tools](https://ck3.paradoxwikis.com/forum:1593630/#post-29225852) with syntax highlighting and completions. If you want to toggle comments in Sublime, you also need to add [this file](https://cdn.discordapp.com/attachments/563655919892692996/649656191173263370/PDXComments.tmPreference) to the same "User" folder.
+- [Notepad++](https://notepad-plus-plus.org/downloads/). Choose Perl as your language for syntax highlighting. To set it as default, go to Settings, Styler Configurator, find Perl in the list on the left and add "gui txt" (without quotes) to the "User ext." field at the bottom.
+- [Intellij IDEA](https://www.jetbrains.com/idea/). Has a fan-made Paradox Language Support plugin with syntax highlighting and validation. To install it, go to File -> Settings -> Plugins and search for "Paradox Language Support".
+- [Pulsar](https://pulsar-edit.dev/) (fork of Atom). Doesn't include UTF-8-BOM encoding needed for localization files. Otherwise is very customizable. Choose Perl 6 as your language for highlighting. To set it as default, go to File, Config, find "core:" and add below it: "customFileTypes: "source.perl6": [ "txt" "gui"]", like in [this example](https://discuss.atom.io/t/how-do-i-make-atom-recognize-a-file-with-extension-x-as-language-y/26539).
+
+
+**Always check the error.log file for execution errors!**
+
+It's in ``Documents/Paradox Interactive/Crusader Kings III/logs/error.log``
+
+Also use ``release_mode`` console command to show the error tracker in the game.
+
+**The log folder also has lists of effects, triggers and scopes** - this is what you can actually use in [script](Scripting.md) 
+
+Use ``script_docs`` and ``dump_data_types`` console commands in the game to generate them.
+
+**On Linux this directory is** ``~/.local/share/Paradox Interactive/Crusader Kings III``
+
+
+**Debug mode shortcuts** - with debug mode enabled, we have extra clicks for characters:
+- Ctrl+click - switch to this character
+- Alt+click - kill the character
+- Ctrl+Alt+click - open the character in the Explorer.
+
+Explorer lets us easily run effects and triggers on game objects. The console has a button to open it. 
+
+The console can also run script, add the word effect or trigger first, like this: ``effect add_gold = 100`` or ``trigger is_adult = yes``
+
+- **Remove your local copy of the mod when you subscribe to the Steam version!**Otherwise the mod will not work in the game. The launcher needs to have only one version of your mod: local or Steam. (You can also remove the .mod file or change its extension, rather than deleting the whole mod folder) You don't need to subscribe to your own mod to test it, if it was uploaded without errors, it will work for others.
 - **Create a mod for your modifications**: use a personal mod even for minor changes, and never directly modify the game files in the CK3 game folder as they may be overwritten without warning.
-- **Use a good text editor** to edit files and search through folders. The following, aside from Intellij IDEA are free:
-   - [Visual Studio Code](https://code.visualstudio.com/). Has fan-made extensions, like [CK3 Tiger](https://marketplace.visualstudio.com/items?itemName=unlomtrois.ck3tiger-for-vscode&ssr=false#overview) to validate code, [Paradox Highlight](https://marketplace.visualstudio.com/items?itemName=dragon-archer.paradox-highlight&ssr=false#overview) for syntax highlighting and [CWTools](https://marketplace.visualstudio.com/items?itemName=tboby.cwtools-vscode) which does both and adds autocomplete and tooltips for triggers and effects. To install, use the links or go to Extensions on the left panel of VSC and search for them. (Note: CWTools validation rules are incomplete and will show a lot of false errors)
-   - [Sublime Text](https://www.sublimetext.com/). Often used by developers themselves, and they've released an extension for it: [CK3 Tools](https://ck3.paradoxwikis.com/forum:1593630/#post-29225852) with syntax highlighting and completions. If you want to toggle comments in Sublime, you also need to add [this file](https://cdn.discordapp.com/attachments/563655919892692996/649656191173263370/PDXComments.tmPreference) to the same "User" folder.
-   - [Notepad++](https://notepad-plus-plus.org/downloads/). Choose Perl as your language for syntax highlighting. To set it as default, go to Settings, Styler Configurator, find Perl in the list on the left and add "gui txt" (without quotes) to the "User ext." field at the bottom.
-   - [Intellij IDEA](https://www.jetbrains.com/idea/). Has a fan-made Paradox Language Support plugin with syntax highlighting and validation. To install it, go to File -> Settings -> Plugins and search for "Paradox Language Support".
-   - [Pulsar](https://pulsar-edit.dev/) (fork of Atom). Doesn't include UTF-8-BOM encoding needed for localization files. Otherwise is very customizable. Choose Perl 6 as your language for highlighting. To set it as default, go to File, Config, find "core:" and add below it: "customFileTypes: "source.perl6": [ "txt" "gui"]", like in [this example](https://discuss.atom.io/t/how-do-i-make-atom-recognize-a-file-with-extension-x-as-language-y/26539).
-- **Always check the error.log file for execution errors**. ``Documents/Paradox Interactive/Crusader Kings III/logs/error.log``
-- **The log folder also contains lists of effects, triggers and scopes.** Use ``script_docs`` and ``dump_data_types`` console commands in the game to generate them.
-- **The directory for the CK3 folder on Linux is** ``~/.local/share/Paradox Interactive/Crusader Kings III``
 - **Communicate key facts about your mod:**
    - List the main changes and additions at the top of the description. To help with compatibility, you may add a list of changed files at the bottom.
    - Provide links to your mod on other platforms (Workshop, Paradox Mods, forums).
 - When possible, upload your mod to all platforms, especially if it is popular. Not everybody owns the game on Steam.
 - Backup your work. Either manually or with a source control system like Git. Consider using GitHub and Discord for team collaboration.
-- **Remove your local copy of the mod when you subscribe to the Steam version**, otherwise it will not work in the game. (removing the .mod file or changing its extension is enough)
 - Use a proper merge tool (like [WinMerge](https://winmerge.org/?lang=en)) to merge between folders and update modified files for a new patch.
 - If you're replacing text across dozens or hundreds lines of code, regular expressions may save a lot of time. They are available in all of the text editors above. Learning resources: [RegexOne](https://regexone.com/), [RegExr](https://regexr.com/).
 - Win+V opens your clipboard history. You'll be copying a lot of text while modding, and this lets you access older copied entries without going back to their source.
