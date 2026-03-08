@@ -679,7 +679,7 @@ Such custom on_actions are useful to group events or effects. We can create new 
 
 - ``on_birth_child`` - when a child is born
 - ``on_16th_birthday`` - when a child becomes an adult
-- ``random_yearly_playable_pulse`` - once a year, at a random date, for every count+ character who is allowed be played. Useful for rare events.
+- ``random_yearly_playable_pulse`` - once a year, at a random date, for every count+ character who is allowed to be played. Useful for rare events.
 - ``quarterly_playable_pulse`` - a more frequent pulse, every three months, for the same kind of characters
 - ``on_game_start`` - when the game starts, but before the player selects a character, so ``every_player`` doesn't work here
 - ``on_game_start_after_lobby`` - after the player has selected a character and confirmed. This is where you can affect player characters
