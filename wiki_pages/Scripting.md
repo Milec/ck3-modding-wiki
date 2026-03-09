@@ -404,14 +404,15 @@ set_variable = {
 }
 ```
 
-Get its value with ``var:``
+We can check that this variable is set with ``has_variable = test``
+
+We can get its value with ``var:``
 
 ``add_gold = var:test``
 
 ``marry = var:my_crush``
 
 A variable can be set simply with ``set_variable = test``. It is the same as setting a variable with ``value = yes``.
-
 
 To change it, use ``change_variable``, to remove, ``remove_variable``, for example:
 
@@ -431,6 +432,15 @@ set_variable = {
   }
 }
 ```
+
+
+**Important!** Since a normal variable is stored on a specific object (aka scope), we need to be in the same scope when checking for it.
+
+E.g. If we set it on a ``player_heir`` and go back to ``root``, we need to remember to switch to ``player_heir`` each time:
+
+``player_heir = { has_variable = test }``
+
+``add_gold = player_heir.var:test`` - this adds gold to the current scope, equal to the variable that ``player_heir`` has
 
 
 There are different types of variables based on how they are stored:
@@ -459,6 +469,8 @@ If the variable stores another character, use GetCharacter instead of GetValue. 
 A global variable is displayed like this:
 
 ``"[GetGlobalVariable('test').GetValue]"``
+
+We can check that it is set with ``"[GetPlayer.MakeScope.Var('test').IsSet]"``
 
 For more see [Variables](Variables.md) and [Displaying a variable in UI](Interface.md#displaying-a-variable-or-script-value)
 
