@@ -110,7 +110,7 @@ struggle_phase_custom_1 = {
 }
 ```
 
-Example for texticons.txt:
+Example for texticons.gui:
 ```lua
 texticon = {
 	icon = struggle_custom_phase_1
