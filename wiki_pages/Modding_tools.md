@@ -16,8 +16,8 @@ This page gives an overview of publicly released tools with brief descriptions a
 
 | **Name** | **Category** | **Link(s)** | **Description** |
 | --- | --- | --- | --- |
-| Azgaar to CK3 Converter | Total Conversion Tool | [Github](https://github.com/MnTronslien/AzgaarToCK3) | Takes the map made in [Azgaar Fantasy Maps](https://azgaar.github.io/Fantasy-Map-Generator) and converts them into a playable CK3 mod complete with de jure and de facto hierarchy, culture and faiths. |
-| Clausewitz Scenario Editor | General | [Github](https://github.com/mmyers/eug) | A history editor compatible with CK2/3, EU3/4, Victoria 2, and HOI3. It can also be helpful for assigning De Jure titles by selecting them visually. |
+| Azgaar to CK3 Converter | General | [Github](https://github.com/MnTronslien/AzgaarToCK3) | Takes the map made in [Azgaar Fantasy Maps](https://azgaar.github.io/Fantasy-Map-Generator) and converts them into a playable CK3 mod complete with de jure and de facto hierarchy, culture and faiths. |
+| Clausewitz Scenario Editor | [History modding](History_modding.md) | [Github](https://github.com/mmyers/eug) | A history editor compatible with CK2/3, EU3/4, Victoria 2, and HOI3. It can also be helpful for assigning De Jure titles by selecting them visually. |
 | ck3-tiger | General | [Github](https://github.com/amtep/ck3-tiger) | A validator that checks Crusader Kings 3 user mod files for common mistakes and warns about them. For example: missing localizations, or using a faith trigger on a character. |
 | ck3-tiger for VS Code | General | [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=unlomtrois.ck3tiger-for-vscode) | An extension for VS Code that integrates ck3-tiger logs with Problems tab and allows to see issues directly in the IDE. |
 | ck3-tiger Github Action | General | [Github](https://github.com/kaiser-chris/tiger-action-public) | A base repo and guide on how to setup ck3-tiger as a GitHub workflow action. |
