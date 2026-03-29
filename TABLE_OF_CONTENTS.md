@@ -144,6 +144,7 @@ Complete index of all pages and their sections.
   - [Game](wiki_pages/Defines.md#game)
   - [Setup](wiki_pages/Defines.md#setup)
   - [Jomini Map](wiki_pages/Defines.md#jomini-map)
+  - [Skills](wiki_pages/Defines.md#skills)
   - [Characters](wiki_pages/Defines.md#characters)
 
 ## [Dynasties modding](wiki_pages/Dynasties_modding.md)

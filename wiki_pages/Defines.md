@@ -11,6 +11,7 @@
   - [Game](#game)
   - [Setup](#setup)
   - [Jomini Map](#jomini-map)
+  - [Skills](#skills)
   - [Characters](#characters)
 
 
@@ -18,7 +19,7 @@
 
 Vanilla defines are set in *game\common\defines\00_defines.txt*.
 
-To modify defines, it is best not to modify the original file, but rather to use a mod. To do so, [create a mod](Mod_structure.md#creating_initial_files), then create a text file in *Documents\Paradox Interactive\mod\[mod name]\common\defines*. To change a define, use the following format in the following example, which changes the end date to 1800:
+To modify defines, it is best not to modify the original file, but rather to use a mod. To do so, [create a mod](Mod_structure.md#creating_initial_files), then create a text file in *Documents\Paradox Interactive\mod\[mod name]\common\defines*. Remember to change the name of the "00_defines.txt" to, for example to "my_defines.txt". Otherwise you will be overwriting the entire vanilla file with just your one game change. Causing the game to not boot. To change a define, use the following format in the following example, which changes the end date to 1800:
 
 ```
 NGame = {
@@ -41,7 +42,7 @@ The following is a (non-exhaustive) list of defines, organized by category.
 | **Variable** | **Unit** | **Notes/description** |
 | --- | --- | --- |
 | END_DATE = "1453.1.1" |  | YYYY.M.D |
-| GAME_SPEED_TICKS | Seconds | Number of seconds a day should take at every game speed (first value is speed 1, last value is speed 5). |
+| GAME_SPEED_TICKS  = {<br>        2<br><br>        1<br><br>        0.5<br><br>        0.2<br><br>        0.0<br><br>    } | Seconds | Number of seconds a day should take at every game speed (first value is speed 1, last value is speed 5). |
 | COMBAT_TICK_LIMIT = 1 |  |  |
 | LAG_DECREASE_SPEED_DAYS = 15 | Days | Number of days of client lag that will cause a speed decrease in multiplayer. |
 | LAG_PAUSE_DAYS  = 30 | Days | Number of days of client lag that will cause a pause in multiplayer. |
@@ -49,7 +50,8 @@ The following is a (non-exhaustive) list of defines, organized by category.
 | BENCHMARK_TEST_DURATION = 135 | Seconds | Duration of a benchmark test using the "-benchmark" launch option. |
 | BENCHMARK_INTERFACE_INTERVAL = 5.0 | Seconds | Time before the benchmark changes the open UI window. |
 | BENCHMARK_OBSERVE_CHARACTER = k_england | Title | The title of the character who will be observed for the benchmark. |
-| BENCHMARK_WAYPOINTS |  | Where the camera should pan during the benchmark. |
+| BENCHMARK_WAYPOINTS  = {<br>        700 3000 2 5<br><br>        1000 2500 7 5<br><br>        1000 2300 2 5<br><br>        700 2000 5 1<br><br>        1200 2000 30 1<br><br>        1500 1800 7 5<br><br>        1900 2200 5 5<br><br>        1500 2400 7 5<br><br>        2200 2700 7 5<br><br>        2500 3500 2 4<br><br>        1850 3700 2 4<br><br>        1650 3200 2 1<br><br>    } |  | Where the camera should pan during the benchmark.<br>First number is x<br><br>Second is y<br><br>Third is zoom level<br><br>Fourth is how much time to spend traveling between the waypoint and the next |
+| MERIT_GUI_UPDATE_INTERVAL = 60 | Frames | How often the Merit Pool GUI is updated in frames <br><sup>(yes you read that correctly once every second, if 60 FPS)</sup> |
 
 
 ### Setup
@@ -58,9 +60,9 @@ The following is a (non-exhaustive) list of defines, organized by category.
 | **Variable** | **Unit** | **Notes/description** |
 | --- | --- | --- |
 | COURTLESS_CHARACTER_GUEST_CHANCE = 0.25 |  | Chance that a courtless character is sent to a court as a guest instead of a regular courtier on game start. |
-| GENERATED_POOL_CHARACTERS |  | Random range for number of characters per pool (duchy) generated at the start of the game |
-| GENERATED_POOL_CHARACTER_TEMPLATES |  | Templates used for the pool character. Presumably, the trait-based templates are characters skilled in that trait. |
-| GENERATED_POOL_CHARACTER_TEMPLATE_WEIGHTS |  | Influence the chance of each template appearing. Correspond to the template names at the same index. |
+| GENERATED_POOL_CHARACTERS = { 2 6 } |  | Random range for number of characters per pool (duchy) generated at the start of the game |
+| GENERATED_POOL_CHARACTER_TEMPLATES = {<br>        "pool_repopulate_spouse"<br><br>        "pool_repopulate_prowess"<br><br>        "pool_repopulate_diplomacy"<br><br>        "pool_repopulate_martial"<br><br>        "pool_repopulate_stewardship"<br><br>        "pool_repopulate_intrigue"<br><br>        "pool_repopulate_learning"<br><br>        "pool_repopulate_local_flavor"<br><br>    } |  | Templates used for the pool character. Presumably, the trait-based templates are characters skilled in that trait. |
+| GENERATED_POOL_CHARACTER_TEMPLATE_WEIGHTS  = {<br>        2<br><br>        5<br><br>        1<br><br>        1<br><br>        1<br><br>        1<br><br>        1<br><br>        5<br><br>    } |  | Influence the chance of each template appearing. Correspond to the template names at the same index. |
 | DESIRED_NEIGHBOR_POOLS = 4 |  | Number of pools each pool should try to border. |
 | MAX_POOL_NEIGHBOR_DISTANCE = 3 |  | Maximum number of sea zones away a pool should search for a neighboring pool. |
 
@@ -70,10 +72,23 @@ The following is a (non-exhaustive) list of defines, organized by category.
 
 | **Variable** | **Unit** | **Notes/description** |
 | --- | --- | --- |
-| WORLD_EXTENTS_X = 8191 |  | How wide the map is. |
-| WORLD_EXTENTS_Y = 51 |  | How deep the map is. |
-| WORLD_EXTENTS_Z = 4095 |  | How tall the map is. |
-| WATERLEVEL = 3.8 |  |  |
+| WORLD_EXTENTS_X = 9215 |  | How wide the map is. |
+| WORLD_EXTENTS_Y = 50 |  | How deep the map is. |
+| WORLD_EXTENTS_Z = 4607 |  | How tall the map is. |
+| WATERLEVEL = 3 |  | 0.06 in 0-1, 19 in 0-255, use 11% HSB in Photoshop |
+
+
+### Skills
+
+
+| **Variable** | **Unit** | **Notes/description** |
+| --- | --- | --- |
+| MAX_DIPLOMACY = 100 |  | Maximum possible diplomacy skill points per character. |
+| MAX_MARTIAL = 100 |  | Maximum possible martial skill points per character. |
+| MAX_STEWARDSHIP = 100 |  | Maximum possible stewardship skill points per character. |
+| MAX_INTRIGUE = 100 |  | Maximum possible intrigue skill points per character. |
+| MAX_LEARNING = 100 |  | Maximum possible learning skill points per character. |
+| MAX_PROWESS = 100 |  | Maximum possible prowess skill points per character. |
 
 
 ### Characters
@@ -106,18 +121,28 @@ The following is a (non-exhaustive) list of defines, organized by category.
 | RANDOM_CHARACTER_AGE_MIN_HEALTH = 2.5 |  | Minimum base health for randomly-generated characters after adjusting for age. |
 | MAX_STRESS_LEVEL = 3 |  |  |
 | STRESS_PER_LEVEL = 100 |  |  |
-| STRESS_MONTHLY_CHANGE = 0 |  | Stress changes monthly by this value until reaching a character's base stress. |
+|  | <s>Stress changes monthly by this value until reaching a character's base stress.</s> |  |
 | MAX_DREAD = 100 |  |  |
 | BASE_DREAD = 0 |  |  |
 | DREAD_MONTHLY_CHANGE = 0.5 |  | Dread changes monthly by this value until reaching a character's base dread. |
 | BOLD_LEVEL_COWED = 45 |  | The amount of dread above a character's [boldness value](https://ck3.paradoxwikis.com/Attributes#dread) for them to be terrified. |
 | BOLD_LEVEL_INTIMIDATED = 20 |  | The amount of dread above a character's [boldness value](https://ck3.paradoxwikis.com/Attributes#dread) for them to be intimidated. |
-| MAX_TYRANNY = 1000 |  |  |
+| MAX_TYRANNY = 1000 |  | Maximum tyranny value a character can have. |
 | TYRANNY_MONTHLY_CHANGE = -0.25 |  | Tyranny changes by this amount every month. |
+| MAX_PROVISIONS = 2500 |  | Maximum provisions value a character can have. |
+| PROVISIONS_LOW_WARNING = 500 |  | When travel planner should warn about provisions running low. |
+| BASE_HERD_CONVERSION_RATE = 0.15 |  | Base herd conversion rate. |
+| BASE_HERD_CAPACITY = {<br>0         # Unlanded<br><br>        500     # Barony<br><br>        3000     # County<br><br>        5000     # Duchy<br><br>        15000     # Kingdom<br><br>        20000     # Empire<br><br>        20000     # Hegemony<br><br>} |  | Base herd capacity for different title tiers. |
+| GOLD_FROM_HERD_FACTOR = 0.0005 |  | The amount of herd that provides monthly gold income. |
+| BASE_HERDER_GAIN_PER_COUNTY = 1.0 |  | Base monthly herd gain for herders. <br>`(NCountyData::MAX_COUNTY_FERTILITY / CountyFertility) *BASE_HERDER_GAIN_PER_COUNTY` |
+| MAX_STRIFE_OPINION = 100 |  | Maximum strife opinion value a character can have. |
+| STRIFE_OPINION_MONTHLY_CHANGE = -0.2 |  | Strife opinion is changing by this value each month |
 | BASE_FERTILITY = 0.5 |  |  |
 | BASE_HEALTH = 5.0 |  |  |
-| LEVELS_PIETY |  | Amounts of piety needed for various devotion levels. The first/lowest level is first in the list, and they are sorted in ascending order. |
-| LEVELS_PRESTIGE |  | Amounts of prestige needed for various fame levels. The first/lowest level is first in the list, and they are sorted in ascending order. |
+| LEVELS_PIETY = <br>{ 1000 1500 2500 4500 8500 13000 17000 22500 } |  | Amounts of piety needed for various devotion levels. The first/lowest level is first in the list, and they are sorted in ascending order. |
+| LEVELS_PRESTIGE = { 1000 2000 5000 10000 25000 } |  | Amounts of prestige needed for various fame levels. The first/lowest level is first in the list, and they are sorted in ascending order. |
+| LEVELS_INFLUENCE = { 1000 2000 4000 8000 16000 } |  | Amounts of influence needed for various influence levels. The first/lowest level is first in the list, and they are sorted in ascending order. |
+| LEVELS_MERIT = <br>{ 100 1000 2000 3500 5500 8500 12000 17000 23000 } |  | Amounts of merit needed for various merit levels. The first/lowest level is first in the list, and they are sorted in ascending order. |
 | BASE_PIETY_EXPERIENCE = 1000 |  | Initial piety experience (used for devotion). |
 | BASE_PRESTIGE_EXPERIENCE = 1000 |  | Initial prestige experience (used for fame). |
 | LEVEL_DROP_MAX_RETAINED_PROGRESS_PIETY = 0.5 |  | A character who drops a level of devotion retains this amount (percentage) of progress towards the next level. |
