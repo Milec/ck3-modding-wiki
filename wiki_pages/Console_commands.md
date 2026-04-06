@@ -29,13 +29,11 @@ Character IDs can be seen by hovering the cursor over a character with debug mod
 - [Cheats](#cheats)
   - [Spawning artifacts](#spawning-artifacts)
   - [Converting commands](#converting-commands)
+  - [Shattered World mode](#shattered-world-mode)
   - [Scripting commands](#scripting-commands)
 - [Testing commands](#testing-commands)
 - [Trait tags](#trait-tags)
 - [Innovation tags](#innovation-tags)
-- [Title Tags](#title-tags)
-  - [Finding title tags based on in-game name](#finding-title-tags-based-on-in-game-name)
-  - [Finding custom title tags](#finding-custom-title-tags)
 - [See also](#see-also)
 - [References](#references)
 
@@ -223,14 +221,13 @@ Cheats are console commands that can be used to give unfair advantages as oppose
 | discover_innovation | Discovers [innovation id] for the culture of [character id], if no character is specified then the player character's. Pressing tab reveals all innovation IDs. | [innovation id] [character id] | discover_innovation innovation_motte |
 | dynasty_prestige | Adds [amount] of renown to [dynasty id], if no dynasty is specified then the player character's dynasty. Negative values lower it. Default 1000. | [amount] [dynasty id] | dynasty_prestige 100000 |
 | effect change_government = | Change government to [government id], will not work if the government's DLC is not installed. | [government id] | effect change_government = feudal_government |
-| effect add_character_modifier = { modifier = ai_extreme_conqueror_modifier } | Gives currently played charecter Extreme Conquerer Bonuses | none | effect add_character_modifier = { modifier = ai_extreme_conqueror_modifier } |
 | end_diarchy | Ends power sharing for [character id], if no character is specified then the player character. | [character id] | end_diarchy |
 | end_schemes | All schemes targeting the player character are abandoned. | None | end_schemes |
 | event | Triggers [event id]. | [event id] [character id] | event court_maintenance.0012 |
 | fow | Toggles the fog of war. | None | fow |
 | gain_all_dynasty_perks | Buys all dynasty legacies for the dynasty of [character id], if no character is specified then the player character's. | [character id] | gain_all_dynasty_perks |
 | gain_all_perks | Gives all lifestyle perks to [character id], if no character is specified then the player character. | [character id] | gain_all_perks |
-| give_title | Gives [title id] to [character id], if no character is specified then the player character. Pressing tab reveals all title IDs. | [title id] [character id] | give_title e_hre |
+| give_title | Gives [title id] to [character id], if no character is specified then the player character. Pressing tab reveals all title IDs.<br>**Note**: A title's ID can be found by hovering over its coat-of-arms. | [title id] [character id] | give_title e_hre |
 | gold | Adds [amount] of gold to the player character. Negative values lower it. Default 1000. | [amount] | gold 500 |
 | guaranteed_scheme_success | Schemes are always successful. | None | guaranteed_scheme_success |
 | guaranteed_scheme_secrecy_success | Schemes are always secret. | None | guaranteed_scheme_secrecy_success |
@@ -398,7 +395,7 @@ Most artifacts are randomly generated through complex scripts and cannot be spaw
 
 ### Converting commands
 
-The following commands can be used to convert the realm to a faith, culture or government.
+The following commands can be used to convert the realm to a faith, culture, government or title hierarchy.
 
 | **Command** | **Conversion** |
 | --- | --- |
@@ -412,6 +409,18 @@ The following commands can be used to convert the realm to a faith, culture or g
 | Converts every courtier and guest to the age of 20 (can replace the number with a different value) |  |
 | Converts every vassal and sub-vassal to Feudal government (can replace the government ID with any other) |  |
 | Changes the development of every realm county to 100 (can replace the number with a different value) |  |
+| Assimilates every held title one rank lower into the primary title |  |
+
+
+### Shattered World mode
+
+To play on a Shattered World use the following commands:
+
+| **Command** | **Shattered World level** |
+| --- | --- |
+| Kingdoms |  |
+| Duchies |  |
+| Counties |  |
 
 
 ### Scripting commands
@@ -430,7 +439,6 @@ Script commands are typically more involved, and mostly used for setting up even
 | effect every_vassal_or_below = { remove_trait = traitname } | Removes trait from every subject | trait name | effect every_vassal_or_below = { remove_trait = ill } |
 | effect every_courtier_or_guest = { add_trait = traitname } | Adds trait to every courtier or guest | trait name | effect every_courtier_or_guest = { add_trait = strong } |
 | effect every_courtier_or_guest = { remove_trait = traitname } | Removes trait from every courtier or guest | trait name | effect every_courtier_or_guest = { remove_trait = infertile } |
-| effect title:[x] = { set_capital_county = title:[y] } | Makes [x] de jure part of [y] | [x]:title id<br>[y]:county id | effect title:e_byzantium = { set_capital_county = title:c_rome } |
 
 
 ## Testing commands
@@ -617,61 +625,6 @@ Innovation IDs usually match their name. The following innovations use a differe
 | ![Innovation administration 01](../assets/images/innovation_administration_01.png) Promissory Notes | innovation_currency_04 |
 | ![Innovation misc inventions](../assets/images/innovation_misc_inventions.png) Renaissance Thought | innovation_development_04 |
 | Stone Forts | innovation_burhs |
-
-
-## Title Tags
-
-
-> **Main article:** [Titles](https://ck3.paradoxwikis.com/Titles)
-
-
-All titles have an internal title tag that can be found in ``game\common\landed_titles\00_landed_titles.txt``. Title tags have a prefix based on their rank, followed by an underscore (``_``) and then their name.
-
-| **Rank** | **Prefix** | **Example** |
-| --- | --- | --- |
-| ![Barony](../assets/icons/barony.png) | `b_` | `Wigmore -> b_wigmore` |
-| ![County](../assets/icons/county.png) | `c_` | `Sundgau -> c_sundgau` |
-| ![Duchy](../assets/icons/duchy.png) | `d_` | `Sicily -> d_sicily` |
-| ![Kingdom](../assets/icons/kingdom.png) | `k_` | `Denmark -> k_denmark` |
-| ![Empire](../assets/icons/empire.png) | `e_` | `Persia -> e_persia` |
-
-
-Title Tags can also be seen in their respective title lists:
-- [List of baronies](https://ck3.paradoxwikis.com/List_of_baronies)
-- [List of counties](https://ck3.paradoxwikis.com/List_of_counties)
-- [List of duchies](https://ck3.paradoxwikis.com/List_of_duchies)
-- [List of kingdoms](https://ck3.paradoxwikis.com/List_of_kingdoms)
-- [List of empires](https://ck3.paradoxwikis.com/List_of_empires)
-
-### Finding title tags based on in-game name
-
-The title ID may not match the title's name in-game. For example, the player may have their game set to a language other than English or a title has a culture-specific name. Use the following steps to find a title ID purely on its in-game name:
-- Navigate to the file located at ``game\localization\LANGUAGE\titles_l_LANGUAGE.yml``, replacing ``LANGUAGE`` with your game language.
-[CTRL][F]- Open the file with a text editor like Notepad++ and search for any instances of the in-game name using  + .
-- If you managed to find a match:
-   - The line should look similar to `` b_my_barony_name:0 "In-game name for barony"``.
-   - The title ID is the word before the ``:0``, therefore being ``b_my_barony_name`` in this example.
-- If you could not find a match:
-   - Close the file.
-   - In the same folder as the previous file, open the file ``titles_cultural_names_l_LANGUAGE.yml``, replacing ``LANGUAGE`` appropriately.
-   - Repeat your search for the title's in-game name in this file.
-   - When you find a match, it should look like so: `` cn_lunden:0 "Lunden"``.
-   - Remember/copy the word before the ``:0`` (in this example, ``cn_lunden``); this is a *cultural name key* of the title.
-   - Close the file.
-   - Navigate to the file ``game\common\landed_titles\00_landed_titles.txt`` and open it with your text editor.
-   - Perform a search for the *cultural name key* you found in the previous file (e.g., ``cn_lunden``).
-   - The search query should land within a block named ``cultural_names`` enclosed by curly brackets (``{``, ``}``).
-   - Read the lines above until you reach another start of a block (denoted by ``b_london = {``). Ignore any blocks like ``color = {`` or ``color2 ={``.
-   - The word in place of ``b_london`` is your title ID.
-
-
-### Finding custom title tags
-
-Custom titles (i.e. the title of a player created Empire) do not follow the same naming convention. To find the ID:
-- From the debug console use the command ``explorer`` to open Object Browser
-- In Object Browser choose Provider: Landed Titles
-- Enter search term
-- Hover over the Name field to show the title card
 
 
 ## See also
