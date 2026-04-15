@@ -439,6 +439,10 @@ Script commands are typically more involved, and mostly used for setting up even
 | effect every_vassal_or_below = { remove_trait = traitname } | Removes trait from every subject | trait name | effect every_vassal_or_below = { remove_trait = ill } |
 | effect every_courtier_or_guest = { add_trait = traitname } | Adds trait to every courtier or guest | trait name | effect every_courtier_or_guest = { add_trait = strong } |
 | effect every_courtier_or_guest = { remove_trait = traitname } | Removes trait from every courtier or guest | trait name | effect every_courtier_or_guest = { remove_trait = infertile } |
+| effect  root.culture = { add_culture_tradition = tradition } | Adds a tradition to the player's  culture | tradition name | effect root.culture = {  add_culture_tradition = tradition_horse_lords } |
+| effect  root.culture = { remove_culture_tradition = tradition } | Adds a tradition to the player's  culture | tradition name | effect root.culture = {  remove_culture_tradition = tradition_horse_lords } |
+| effect  culture:culture = { add_culture_tradition = tradition } | Adds a tradition to a specific  culture | culture name, tradition name | effect culture:mongol = {  add_culture_tradition = tradition_horse_lords } |
+| effect  culture:culture = { remove_culture_tradition = tradition } | Adds a tradition to a specific  culture | culture name, tradition name | effect culture:mongol = {  remove_culture_tradition = tradition_horse_lords } |
 
 
 ## Testing commands
