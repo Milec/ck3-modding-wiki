@@ -1,6 +1,6 @@
 # Console commands
 
-> **Note:** Last verified for version 1.18
+> **Note:** Last verified for version 1.19
 
 
 <figure>
