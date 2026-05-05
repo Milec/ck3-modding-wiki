@@ -201,6 +201,7 @@ Cultures that do not fit this pattern have been listed below:
 | Kannauji | hindustani |
 | Kamrupi | assamese |
 | Rajasthani | rajput |
+| Yamato | japanese |
 
 
 Category:Modding
