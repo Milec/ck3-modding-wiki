@@ -303,6 +303,13 @@ Entries in "adjacencies.csv" take the format:
 
 ## Creating a Map with a Custom Resolution
 
+***The information below is partially outdated because CK3 changed the way it works since 1.18 and 1.19. Update to this Wiki page is needed.***
+
+- Now the resolution of heightmap.png and provinces.png does not match anymore.
+- Nor do they match to *.mask files.
+
+***Old information below.***
+
 **Note:**
 - Width and height are the new widths and height you are setting for your mod.
 - When you open .dds files such as the surround_mask.dds, check if it has mipmaps. If that is the case, generate new mipmaps for the resized file.
