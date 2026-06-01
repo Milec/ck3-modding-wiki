@@ -443,6 +443,7 @@ Script commands are typically more involved, and mostly used for setting up even
 | effect  root.culture = { remove_culture_tradition = tradition } | Adds a tradition to the player's  culture | tradition name | effect root.culture = {  remove_culture_tradition = tradition_horse_lords } |
 | effect  culture:culture = { add_culture_tradition = tradition } | Adds a tradition to a specific  culture | culture name, tradition name | effect culture:mongol = {  add_culture_tradition = tradition_horse_lords } |
 | effect  culture:culture = { remove_culture_tradition = tradition } | Adds a tradition to a specific  culture | culture name, tradition name | effect culture:mongol = {  remove_culture_tradition = tradition_horse_lords } |
+| effect title:[x] = { set_capital_county = title:[y] } | Makes [y] the county capital of [x] | [x]:title id<br>[y]:county id | effect title:e_byzantium = { set_capital_county = title:c_rome } |
 
 
 ## Testing commands
