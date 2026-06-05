@@ -400,6 +400,7 @@ The following commands can be used to convert the realm to a faith, culture, gov
 | **Command** | **Conversion** |
 | --- | --- |
 | Converts every domain county to the character's culture |  |
+| Converts every domain county to the character's faith |  |
 | Converts every realm county to the character's culture |  |
 | Converts every realm county to the character's faith |  |
 | Converts every vassal and sub-vassal to the character's culture |  |
