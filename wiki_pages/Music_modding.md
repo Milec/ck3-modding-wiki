@@ -2,6 +2,15 @@
 
 It is possible to mod custom music into the game, as well as script when and where said tracks will play.
 
+It is also possible to add music to the game without having to edit the games .bank (a kind of specialised file format for storing sounds) files.
+
+
+- [Showing them in the Music Player](#showing-them-in-the-music-player)
+- [Where to put the Music](#where-to-put-the-music)
+
+
+## Showing them in the Music Player
+
 To add the Music tracks we wish to put into the Music Player into categories. To do this they must be implemented with the following files structure:
 
 ```
@@ -53,6 +62,20 @@ game
     └ illustrations
       └ music_player
         └ fp2_cue_soundtrack.dds
+```
+
+
+## Where to put the Music
+
+Put the .ogg or .wav file in a directory and link to that from the **music.txt** file. (root is your mod folder). 
+
+For example:
+```
+mx_raid = {
+    music = "file:/music/my_new_song.ogg"
+    name = some_name_for_loc_key
+    pause_factor = 2
+}
 ```
 
 

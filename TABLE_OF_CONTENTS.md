@@ -415,6 +415,8 @@ Complete index of all pages and their sections.
 
 ## [Music modding](wiki_pages/Music_modding.md)
 
+- [Showing them in the Music Player](wiki_pages/Music_modding.md#showing-them-in-the-music-player)
+- [Where to put the Music](wiki_pages/Music_modding.md#where-to-put-the-music)
 
 ## [Regiments modding](wiki_pages/Regiments_modding.md)
 
