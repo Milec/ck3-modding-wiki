@@ -7,6 +7,8 @@ A git-versioned archive of the official Crusader Kings 3 modding documentation f
 
 📚 **[Complete Table of Contents](TABLE_OF_CONTENTS.md)** - Comprehensive index of all pages and sections
 
+🤖 **[Claude Code skill](.claude/skills/ck3-modding/SKILL.md)** - This repo ships a [Claude](https://claude.com/claude-code) skill (`ck3-modding`) that turns the bundled docs into a working toolkit for building high-quality CK3 mods: a documentation router, a build workflow, and a quality checklist. It activates automatically when you ask Claude Code to create, edit, or debug CK3 mod content while this repository is on your path.
+
 ## About This Repository
 
 This repository contains complete modding documentation for Crusader Kings 3, converted to Markdown format for easy reading, searching, and offline access. All content is sourced from the official Paradox Wiki and is maintained as a reference for mod developers.
